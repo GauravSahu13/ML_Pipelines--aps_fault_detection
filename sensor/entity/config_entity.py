@@ -29,7 +29,7 @@ class DataIngestionConfig:
         except Exception  as e:
             raise SensorException(e,sys)     
 
-'''
+
 class DataValidationConfig:
 
     def __init__(self,training_pipeline_config:TrainingPipelineConfig):
@@ -38,6 +38,7 @@ class DataValidationConfig:
         self.missing_threshold:float = 0.2
         self.base_file_path = os.path.join("aps_failure_training_set1.csv")
 
+'''
 class DataTransformationConfig:
 
     def __init__(self,training_pipeline_config:TrainingPipelineConfig):

@@ -1,5 +1,6 @@
 from sensor.logger import logging
 from sensor.exception import SensorException
+
 from sensor.utils import get_collection_as_dataframe
 import sys,os
 from sensor.entity import config_entity
@@ -16,3 +17,20 @@ if __name__=="__main__":
           print(data_ingestion.initiate_data_ingestion())
      except Exception as e:
           print(e)
+
+
+'''def test_logger_and_exception():
+     try:
+        logging.info('starting the test_logger_and_exception')
+        res = 3/0
+        print(res)
+        logging.info('stopping the test_logger_and_exception')
+     except Exception as e:
+        logging.debug('stopping the test_logger_and_exception')
+        raise SensorException(e, sys)
+    
+if __name__=="__main__":
+     try:
+         test_logger_and_exception()
+     except Exception as e:
+         print(e)'''
